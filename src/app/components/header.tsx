@@ -1,19 +1,51 @@
 import Image from "next/image";
 import React from "react";
+import {
+  Navbar,
+  NavbarBrand,
+  NavbarContent,
+  NavbarItem,
+} from "@nextui-org/navbar";
+import Link from "next/link";
+import { Button } from "@nextui-org/button";
 
 const Header = () => {
   return (
-    <div className="w-full px-16 bg-[#005A87] flex h-20 flex-row items-center justify-between">
-      <Image width={100} height={100} alt="logo" src="/logo-yellow.png" />
-      <div className="flex flex-row text-yellow-500 font-bold text-xl gap-4">
-        <ul className="flex flex-row gap-4">
-          <li>Home</li>
-          <li>Services</li>
-          <li>About</li>
-          <li>Contact</li>
-        </ul>
-      </div>
-    </div>
+    <Navbar className="w-full px-16 bg-[#f5f5f5] flex h-20 flex-row items-center justify-center shadow-large">
+      <NavbarBrand>
+        <Image src="/logo-yellow.png" alt="logo" width={100} height={100} />
+      </NavbarBrand>
+      <NavbarContent
+        className="text-[#005A87] text-xl font-semibold sm:flex gap-4"
+        justify="center"
+      >
+        <NavbarItem>
+          <Link color="foreground" href="#">
+            Inicio
+          </Link>
+        </NavbarItem>
+        <NavbarItem>
+          <Link color="foreground" href="#">
+            Líneas de Productos
+          </Link>
+        </NavbarItem>
+        <NavbarItem isActive>
+          <Link href="#" aria-current="page">
+            Nosotros
+          </Link>
+        </NavbarItem>
+        <NavbarItem>
+          <Link color="foreground" href="#">
+            Servicios
+          </Link>
+        </NavbarItem>
+        <NavbarItem>
+          <Link color="foreground" href="#">
+            Contacto
+          </Link>
+        </NavbarItem>
+      </NavbarContent>
+    </Navbar>
   );
 };
 

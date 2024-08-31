@@ -16,7 +16,7 @@ const Header = () => {
         <Image src="/logo-yellow.png" alt="logo" width={100} height={100} />
       </NavbarBrand>
       <NavbarContent
-        className="text-[#005A87] text-xl font-semibold sm:flex gap-4"
+        className="text-[#005A87] mx-auto text-xl font-semibold sm:flex gap-4"
         justify="center"
       >
         <NavbarItem>
@@ -26,7 +26,7 @@ const Header = () => {
         </NavbarItem>
         <NavbarItem>
           <Link color="foreground" href="#">
-            Líneas de Productos
+            Nuestros Productos
           </Link>
         </NavbarItem>
         <NavbarItem isActive>
@@ -34,11 +34,7 @@ const Header = () => {
             Nosotros
           </Link>
         </NavbarItem>
-        <NavbarItem>
-          <Link color="foreground" href="#">
-            Servicios
-          </Link>
-        </NavbarItem>
+
         <NavbarItem>
           <Link color="foreground" href="#">
             Contacto

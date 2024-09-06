@@ -55,7 +55,10 @@ const Clients = () => {
       <div className="flex flex-row justify-center gap-3">
         {dataClientes.map((client) => {
           return (
-            <div className="py-2 px-2 h-100 w-100 justify-center my-auto rounded-lg items-center">
+            <div
+              key={client.id}
+              className="py-2 px-2 h-100 w-100 justify-center my-auto rounded-lg items-center"
+            >
               {client.name === "Gobierno de Tierra del Fuego" ? (
                 <Image src={client.image} alt="logo" width={160} />
               ) : (

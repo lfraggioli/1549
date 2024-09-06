@@ -45,7 +45,10 @@ export default function Products() {
       <div className="flex flex-row  gap-6 justify-center">
         {images.map((image) => {
           return (
-            <div className="flex flex-col gap-4 hover:scale-105 hover:-translate-y-2 duration-300">
+            <div
+              key={image.name}
+              className="flex flex-col gap-4 hover:scale-105 hover:-translate-y-2 duration-300"
+            >
               <Image
                 className=""
                 key={image.name}

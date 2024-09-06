@@ -27,6 +27,6 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "pages/api/send-email.js"
-  ],
+, "src/app/pages/api/send-email.js"  ],
   "exclude": ["node_modules"]
 }

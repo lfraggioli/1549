@@ -1,7 +1,8 @@
 "use client";
 import React from "react";
 import { Image } from "@nextui-org/react";
-
+import { productData } from "../lib/data";
+import { ProductsCarousel } from "./carousel";
 const images = [
   {
     name: "img1",
@@ -29,17 +30,17 @@ export default function Products() {
   return (
     <div className="flex flex-col h-fit w-full gap-10 my-10 justify-center">
       <div className="flex flex-col w-1/2 gap-2 justify-center mx-auto">
-        <h1 className="font-black text-5xl text-center text-black justify-center">
-          Nuestros Productos
+        <h1 className="font-semi text-4xl text-center text-black justify-center">
+          Nos especializamos en las áreas:
         </h1>
-        <p className="text-xl text-black justify-center text-center mx-auto ">
+        {/* <p className="text-xl text-black justify-center text-center mx-auto ">
           <b>
             {" "}
             Nos especializamos en la elaboración de indumentaria de alta calidad{" "}
           </b>
           <br />
           para las siguientes áreas:
-        </p>
+        </p> */}
       </div>
       <div className="flex flex-row  gap-6 justify-center">
         {images.map((image) => {
@@ -58,6 +59,12 @@ export default function Products() {
             </div>
           );
         })}
+      </div>
+      <div className="flex flex-col mt-8 gap-8 py-8 justify-center">
+        <h1 className="text-5xl font-bold mx-auto">Nuestros productos</h1>
+        <div className="  gap-6 justify-center">
+          <ProductsCarousel />
+        </div>
       </div>
     </div>
   );

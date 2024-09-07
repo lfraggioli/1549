@@ -46,9 +46,8 @@ export function ProductsCarousel() {
           {productData.map((item, index) => (
             <CarouselItem key={index} className=" md:basis-1/4 lg:basis-1/5">
               <Card
-                isBlurred
                 isHoverable
-                className="py-4 w-[300px] shadow-none bg-gradient-to-br  from-slate-100 to-slate-50 h-[400px]"
+                className="py-4 w-[300px] shadow-none hover:scale-105 bg-gradient-to-br  from-slate-100 to-slate-50 h-[400px]"
               >
                 <CardHeader className="px-4 flex-col items-center justify-center">
                   <h4 className="font-semibold w-11/12 truncate hover:w-full text-xl text-center">

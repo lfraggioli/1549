@@ -11,31 +11,31 @@ import { Button } from "@nextui-org/button";
 
 const Header = () => {
   return (
-    <Navbar className="w-full px-16 bg-[#f5f5f5] flex h-20 flex-row items-center justify-center shadow-large">
+    <Navbar isBordered>
       <NavbarBrand>
         <Image src="/logo-yellow.png" alt="logo" width={100} height={100} />
       </NavbarBrand>
       <NavbarContent
-        className="text-[#005A87] mx-auto text-xl font-semibold sm:flex gap-4"
-        justify="center"
+        justify="end"
+        className="text-xl font-semibold sm:flex gap-5"
       >
-        <NavbarItem>
+        <NavbarItem className="hover:font-bold hover:scale-110 transition-all duration-200">
           <Link color="foreground" href="#">
             Inicio
           </Link>
         </NavbarItem>
-        <NavbarItem>
+        <NavbarItem className="hover:font-bold hover:scale-110 transition-all duration-200">
           <Link color="foreground" href="#">
             Nuestros Productos
           </Link>
         </NavbarItem>
-        <NavbarItem isActive>
+        <NavbarItem className="hover:font-bold hover:scale-110 transition-all duration-200">
           <Link href="#" aria-current="page">
             Nosotros
           </Link>
         </NavbarItem>
 
-        <NavbarItem>
+        <NavbarItem className="hover:font-bold hover:scale-110 transition-all duration-200">
           <Link color="foreground" href="#">
             Contacto
           </Link>

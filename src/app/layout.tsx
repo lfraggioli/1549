@@ -18,10 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        style={urbanist.style}
-        className={"flex justify-center mx-auto flex-col"}
-      >
+      <body style={urbanist.style} className="flex  flex-col">
         <Providers>
           <Header />
           {children}

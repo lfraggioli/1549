@@ -34,21 +34,24 @@ const responsive = {
 
 export function ProductsCarousel() {
   return (
-    <div className="flex flex-col gap-2 justify-center mx-auto">
+    <div className="flex flex-col gap-2 justify-center w-full">
       <Carousel
-        className="w-full px-20"
+        className="w-full"
         opts={{
           align: "center",
-          loop: true,
           duration: 200,
         }}
       >
-        <CarouselContent className="flex mb-2">
+        <CarouselContent className="w-full flex gap-2 mb-2">
           {productData.map((item, index) => (
-            <CarouselItem key={index} className=" md:basis-1/3 lg:basis-1/5">
-              <Card className="py-4 w-[400px] h-[500px]">
-                <CardHeader className="pb-0 pt-2 px-4 flex-col items-center justify-center">
-                  <h4 className="font-semibold text-2xl text-center">
+            <CarouselItem key={index} className=" md:basis-1/4 lg:basis-1/5">
+              <Card
+                isBlurred
+                isHoverable
+                className="py-4 w-[300px] shadow-none bg-gradient-to-br  from-slate-100 to-slate-50 h-[400px]"
+              >
+                <CardHeader className="px-4 flex-col items-center justify-center">
+                  <h4 className="font-semibold w-11/12 truncate hover:w-full text-xl text-center">
                     {item.name}
                   </h4>
                 </CardHeader>
@@ -57,6 +60,7 @@ export function ProductsCarousel() {
                     src={item.src}
                     className="object-cover rounded-xl"
                     isBlurred
+                    height={320}
                     alt={item.name}
                   />
                 </CardBody>

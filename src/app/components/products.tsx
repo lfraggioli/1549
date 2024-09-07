@@ -33,14 +33,6 @@ export default function Products() {
         <h1 className="font-semi text-4xl text-center text-black justify-center">
           Nos especializamos en las áreas:
         </h1>
-        {/* <p className="text-xl text-black justify-center text-center mx-auto ">
-          <b>
-            {" "}
-            Nos especializamos en la elaboración de indumentaria de alta calidad{" "}
-          </b>
-          <br />
-          para las siguientes áreas:
-        </p> */}
       </div>
       <div className="flex flex-row  gap-6 justify-center">
         {images.map((image) => {

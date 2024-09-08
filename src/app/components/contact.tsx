@@ -19,7 +19,7 @@ const Contact = () => {
             target="_blank"
           >
             <Button size="lg" isIconOnly className="bg-[#25D366] rounded-lg">
-              <WhatsAppIcon className="text-white  p-1 h-12 w-12" />
+              <WhatsAppIcon className="text-white h-12 w-12" />
             </Button>
           </Link>
 
@@ -44,7 +44,7 @@ const Contact = () => {
               target="_blank"
             >
               <Button size="lg" isIconOnly className="bg-[#0077b5] rounded-lg">
-                <LinkedInIcon className="text-white  p-1 h-12 w-12" />
+                <LinkedInIcon className="text-white  h-12 w-12" />
               </Button>
             </Link>
             <Link href="https://www.instagram.com/juanitoijo/" target="_blank">
@@ -53,7 +53,7 @@ const Contact = () => {
                 isIconOnly
                 className="bg-gradient-to-tr from-[#a03ab4] to-[#fd1d1d] rounded-lg"
               >
-                <InstagramIcon className="text-white  p-1 h-12 w-12" />
+                <InstagramIcon className="text-white  h-12 w-12" />
               </Button>
             </Link>
           </div>

@@ -25,15 +25,21 @@ const About = () => {
       <div className="flex flex-row justify-center gap-10">
         {aboutData.map((about) => {
           return (
-            <Card key={about.id} className="flex flex-col w-1/5">
-              <CardBody className="flex flex-col justify-center items-center mx-auto">
+            <Card
+              isBlurred
+              isHoverable
+              key={about.id}
+              className="flex flex-col py-4 w-1/5"
+            >
+              <CardBody className="flex flex-col gap-4 px-4 my-auto py-2 justify-center items-center mx-auto">
                 <Image
+                  className="object-cover"
                   src={about.src}
                   alt={about.src}
-                  width={200}
-                  height={200}
+                  width={240}
+                  height={165}
                 />
-                <h3 className="text-center text-md text-gray-700">
+                <h3 className="text-center text-medium text-gray-700">
                   {about.description}
                 </h3>
               </CardBody>

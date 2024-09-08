@@ -20,23 +20,23 @@ const Header = () => {
         className="text-xl font-semibold sm:flex gap-5"
       >
         <NavbarItem className="hover:font-bold hover:scale-110 transition-all duration-200">
-          <Link color="foreground" href="#">
+          <Link color="foreground" href="#inicio">
             Inicio
           </Link>
         </NavbarItem>
         <NavbarItem className="hover:font-bold hover:scale-110 transition-all duration-200">
-          <Link color="foreground" href="#">
+          <Link color="foreground" href="#productos">
             Nuestros Productos
           </Link>
         </NavbarItem>
         <NavbarItem className="hover:font-bold hover:scale-110 transition-all duration-200">
-          <Link href="#" aria-current="page">
+          <Link href="#nosotros" aria-current="page">
             Nosotros
           </Link>
         </NavbarItem>
 
         <NavbarItem className="hover:font-bold hover:scale-110 transition-all duration-200">
-          <Link color="foreground" href="#">
+          <Link color="foreground" href="#contacto">
             Contacto
           </Link>
         </NavbarItem>

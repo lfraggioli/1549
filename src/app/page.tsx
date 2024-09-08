@@ -9,7 +9,7 @@ import Contact from "./components/contact";
 
 export default function Home() {
   return (
-    <main className="flex flex-col w-full gap-5 bg-[#fafafa] text-black items-center mx-auto px-12 justify-center">
+    <main className="flex flex-col w-full gap-5 bg-gradient-to-b from-[#fafafa] to-[#fdfffc] text-black items-center mx-auto justify-center">
       <div className="flex flex-row h-fit px-16 items-center py-16">
         <div className="flex  w-3/5 px-20 flex-col  py-4 mt-3">
           <h1 className="text-6xl font-bold ">

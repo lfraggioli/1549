@@ -48,21 +48,31 @@ const dataClientes = [
 ];
 const Clients = () => {
   return (
-    <section className="flex flex-col w-full  bg-white justify-center">
-      <h2 className="text-2xl font-normal text-center mt-5 text-gray-500">
+    <section className="flex py-10 gap-5 flex-col w-11/12 rounded-xl border-1 border-gray-500/20  bg-white shadow-sm justify-center">
+      <h2 className="text-2xl font-medium text-center text-gray-500">
         Confían en nosotros
       </h2>
-      <div className="flex flex-row justify-center gap-3">
+      <div className="flex flex-row justify-center gap-10">
         {dataClientes.map((client) => {
           return (
             <div
               key={client.id}
-              className="py-2 px-2 h-100 w-100 justify-center my-auto rounded-lg items-center"
+              className="h-120 w-120 justify-center my-auto items-center"
             >
               {client.name === "Gobierno de Tierra del Fuego" ? (
-                <Image src={client.image} alt="logo" width={160} />
+                <Image
+                  className="object-cover"
+                  src={client.image}
+                  alt="logo"
+                  width={160}
+                />
               ) : (
-                <Image src={client.image} alt="logo" width={100} />
+                <Image
+                  src={client.image}
+                  className="object-cover"
+                  alt="logo"
+                  width={120}
+                />
               )}
             </div>
           );

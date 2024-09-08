@@ -28,21 +28,21 @@ const images = [
 
 export default function Products() {
   return (
-    <div className="flex flex-col h-fit w-full gap-10 my-10 justify-center">
+    <div className="flex px-16 flex-col h-fit w-full gap-10 my-10 justify-center">
       <div className="flex flex-col w-1/2 gap-2 justify-center mx-auto">
-        <h1 className="font-semi text-4xl text-center text-black justify-center">
+        <h1 className="font-medium text-2xl text-center text-gray-500 justify-center">
           Nos especializamos en las áreas:
         </h1>
       </div>
-      <div className="flex flex-row  gap-6 justify-center">
+      <div className="flex flex-row  gap-12 justify-center">
         {images.map((image) => {
           return (
             <div
               key={image.name}
-              className="flex flex-col gap-4 hover:scale-105 hover:-translate-y-2 duration-300"
+              className="flex flex-col gap-4 hover:-translate-y-2 duration-150 w-1/5 "
             >
               <Image
-                className=""
+                className="object-cover rounded-xl"
                 key={image.name}
                 src={image.src}
                 alt={image.name}
@@ -55,7 +55,10 @@ export default function Products() {
           );
         })}
       </div>
-      <div className="flex flex-col mt-8 gap-8 py-8 justify-center">
+      <div
+        id="productos"
+        className="flex flex-col mt-8 gap-8 py-8 justify-center"
+      >
         <h1 className="text-5xl font-bold mx-auto">Nuestros productos</h1>
         <div className="  gap-6 justify-center">
           <ProductsCarousel />

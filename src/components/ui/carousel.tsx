@@ -52,7 +52,7 @@ const Carousel = React.forwardRef<
       orientation = "horizontal",
       opts,
       setApi,
-      plugins,
+      plugins = [],
       className,
       children,
       ...props
@@ -65,12 +65,7 @@ const Carousel = React.forwardRef<
         axis: orientation === "horizontal" ? "x" : "y",
         loop: true,
       },
-      [
-        AutoScroll({
-          playOnInit: true,
-          startDelay: 300,
-        }),
-      ]
+      plugins
     );
     const [canScrollPrev, setCanScrollPrev] = React.useState(false);
     const [canScrollNext, setCanScrollNext] = React.useState(false);
@@ -127,6 +122,18 @@ const Carousel = React.forwardRef<
       };
     }, [api, onSelect]);
 
+    // Effect to set AutoScroll speed to 0 when canScrollNext is true
+    React.useEffect(() => {
+      const autoScroll = api?.plugins()?.autoScroll;
+      if (!autoScroll) return;
+
+      if (canScrollNext) {
+        autoScroll.options.speed = 0;
+      } else {
+        autoScroll.options.speed = 1.2; // Reset to default speed
+      }
+    }, [canScrollNext, api]);
+
     return (
       <CarouselContext.Provider
         value={{
@@ -156,7 +163,6 @@ const Carousel = React.forwardRef<
   }
 );
 Carousel.displayName = "Carousel";
-
 const CarouselContent = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement>
@@ -242,7 +248,7 @@ const CarouselNext = React.forwardRef<
       variant={variant}
       size={size}
       className={cn(
-        "relative mt-10 h-8 w-8 rounded-full",
+        "relative mt-20 h-8 w-8 rounded-full",
         orientation === "horizontal"
           ? "-right-12 top-1/2 -translate-y-1/2"
           : "-bottom-12 left-1/2 -translate-x-1/2 rotate-90",

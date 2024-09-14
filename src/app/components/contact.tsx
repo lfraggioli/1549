@@ -14,15 +14,6 @@ const Contact = () => {
       <div className="flex flex-col gap-4 items-center mx-auto">
         <h1 className="text-gray-800 font-black text-4xl">Contactanos</h1>
 
-        {/* <div className="flex flex-row  justify-center mx-auto items-center gap-2">
-          <Link href="mailto:fraggioli.lucas@gmail.com" target="_blank">
-            <Button size="lg" isIconOnly className="bg-[#c75652] rounded-lg">
-              <EmailIcon className="text-white  p-1 h-12 w-12" />
-            </Button>
-          </Link>
-
-          <h2 className="text-xl">o por Mail</h2>
-        </div> */}
         <div className="flex flex-col gap-4 justify-center mx-auto items-center">
           <h2 className="text-xl font-bold">
             Seguinos en nuestras redes sociales

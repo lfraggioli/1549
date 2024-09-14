@@ -60,9 +60,7 @@ export default function Products() {
         className="flex flex-col mt-8 gap-8 py-8 justify-center"
       >
         <h1 className="text-5xl font-bold mx-auto">Nuestros productos</h1>
-        <div className="  gap-6 justify-center">
-          <ProductsCarousel />
-        </div>
+        <ProductsCarousel />
       </div>
     </div>
   );

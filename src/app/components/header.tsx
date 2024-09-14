@@ -11,9 +11,13 @@ import { Button } from "@nextui-org/button";
 
 const Header = () => {
   return (
-    <Navbar isBordered>
-      <NavbarBrand>
-        <Image src="/logo-yellow.png" alt="logo" width={100} height={100} />
+    <Navbar
+      maxWidth="full"
+      isBordered
+      className="bg-[#f3f3ff]/50 py-2 justify-center mx-auto"
+    >
+      <NavbarBrand className="py-1">
+        <Image src="/logo-yellow.png" alt="logo" width={130} height={100} />
       </NavbarBrand>
       <NavbarContent
         justify="end"

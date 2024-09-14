@@ -6,21 +6,25 @@ import { productData } from "../lib/data";
 import { Card, CardBody, CardHeader } from "@nextui-org/card";
 import {
   Carousel,
+  CarouselApi,
   CarouselContent,
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-
+import Autoplay from "embla-carousel-autoplay";
 export function ProductsCarousel() {
+  const [emblaApi, setEmblaApi] = React.useState<CarouselApi | null>(null);
+  const autoPlay = Autoplay({
+    playOnInit: true,
+    delay: 2500,
+  });
   return (
     <div className="flex flex-col gap-2 justify-center w-full">
       <Carousel
-        className="w-full"
-        opts={{
-          align: "center",
-          loop: true,
-        }}
+        setApi={setEmblaApi}
+        plugins={[autoPlay]}
+        className="w-full h-full"
       >
         <CarouselContent className="w-full flex gap-2 mb-2">
           {productData.map((item, index) => (
@@ -31,7 +35,7 @@ export function ProductsCarousel() {
                 className="py-4 w-[300px] shadow-none hover:scale-105  h-[400px]"
               >
                 <CardHeader className="px-4 flex-col items-center justify-center">
-                  <h4 className="font-semibold w-11/12 truncate hover:w-full text-xl text-center">
+                  <h4 className="font-medium w-11/12 truncate hover:w-full text-lg text-center">
                     {item.name}
                   </h4>
                 </CardHeader>
@@ -47,8 +51,8 @@ export function ProductsCarousel() {
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious />
-        <CarouselNext />
+        <CarouselPrevious className="mt-5" />
+        <CarouselNext className="mt-5" />
       </Carousel>
     </div>
   );

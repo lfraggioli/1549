@@ -5,18 +5,19 @@ import { Button } from "@nextui-org/button";
 import EmailIcon from "@mui/icons-material/Email";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import InstagramIcon from "@mui/icons-material/Instagram";
+import { ContactForm } from "./form";
 const Contact = () => {
   return (
     <div
       id="contacto"
-      className="flex flex-col gap-10 py-10 w-full justify-center mx-auto"
+      className="flex flex-col gap-10 bg-gradient-to-b from-slate-50/10 to-[#c9e0ff] py-10 w-full justify-center mx-auto"
     >
       <div className="flex flex-col gap-4 items-center mx-auto">
-        <h1 className="text-gray-800 font-black text-4xl">Contactanos</h1>
-
-        <div className="flex flex-col gap-4 justify-center mx-auto items-center">
-          <h2 className="text-xl font-bold">
-            Seguinos en nuestras redes sociales
+        <h1 className="text-gray-700 mb-2 font-black text-4xl">Contactanos</h1>
+        <ContactForm />
+        <div className="flex flex-col py-2 mt-6 gap-4 justify-center mx-auto items-center">
+          <h2 className="text-lg text-gray-700 font-medium">
+            También podés seguirnos en nuestras redes sociales
           </h2>
           <div className="flex flex-row gap-2">
             <Link

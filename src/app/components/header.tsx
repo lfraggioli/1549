@@ -14,32 +14,32 @@ const Header = () => {
     <Navbar
       maxWidth="full"
       isBordered
-      className="bg-[#f3f3ff]/50 py-2 justify-center mx-auto"
+      className="bg-[#f3f3ff]/50 py-6 justify-center mx-auto"
     >
-      <NavbarBrand className="py-1">
-        <Image src="/logo-yellow.png" alt="logo" width={130} height={100} />
+      <NavbarBrand>
+        <Image src="/logo-yellow.png" alt="logo" width={180} height={180} />
       </NavbarBrand>
       <NavbarContent
         justify="end"
-        className="text-xl font-semibold sm:flex gap-5"
+        className="text-4xl text-gray-600 font-semibold sm:flex gap-10"
       >
-        <NavbarItem className="hover:font-bold hover:scale-110 transition-all duration-200">
+        <NavbarItem className="hover:font-bold text-xl hover:scale-110 transition-all duration-200">
           <Link color="foreground" href="#inicio">
             Inicio
           </Link>
         </NavbarItem>
-        <NavbarItem className="hover:font-bold hover:scale-110 transition-all duration-200">
+        <NavbarItem className="hover:font-bold hover:scale-110  text-xl transition-all duration-200">
           <Link color="foreground" href="#productos">
-            Nuestros Productos
+            Nuestros productos
           </Link>
         </NavbarItem>
-        <NavbarItem className="hover:font-bold hover:scale-110 transition-all duration-200">
+        <NavbarItem className="hover:font-bold hover:scale-110  text-xl transition-all duration-200">
           <Link href="#nosotros" aria-current="page">
             Nosotros
           </Link>
         </NavbarItem>
 
-        <NavbarItem className="hover:font-bold hover:scale-110 transition-all duration-200">
+        <NavbarItem className="hover:font-bold hover:scale-110  text-xl transition-all duration-200">
           <Link color="foreground" href="#contacto">
             Contacto
           </Link>

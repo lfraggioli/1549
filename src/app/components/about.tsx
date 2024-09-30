@@ -19,27 +19,27 @@ const About = () => {
           </h2>
         </div>
       </div>
-      <h1 className="text-3xl text-center font-semibold">
+      <h1 className="text-4xl mb-4 text-center font-semibold">
         ¿Por que elegirnos?
       </h1>
-      <div className="flex flex-row justify-center gap-10">
+      <div className="flex flex-row justify-center px-10 gap-10">
         {aboutData.map((about) => {
           return (
             <Card
               isBlurred
               isHoverable
               key={about.id}
-              className="flex flex-col py-4 w-1/5"
+              className="flex flex-col py-4 w-1/4"
             >
               <CardBody className="flex flex-col gap-4 px-4 my-auto py-2 justify-center items-center mx-auto">
                 <Image
                   className="object-cover"
                   src={about.src}
                   alt={about.src}
-                  width={240}
-                  height={165}
+                  width={300}
+                  height={185}
                 />
-                <h3 className="text-center text-medium text-gray-700">
+                <h3 className="text-center px-10 text-medium text-gray-700">
                   {about.description}
                 </h3>
               </CardBody>

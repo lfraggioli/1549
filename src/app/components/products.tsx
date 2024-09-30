@@ -39,18 +39,24 @@ export default function Products() {
           return (
             <div
               key={image.name}
-              className="flex flex-col gap-4 hover:-translate-y-2 duration-150 w-1/5 "
+              className="group relative flex rounded-xl items-center justify-center overflow-hidden transition-all duration-500 hover:shadow-sm hover:shadow-black/30 w-1/5"
             >
               <Image
-                className="object-cover rounded-xl"
+                className="h-full w-full rounded-xl object-cover transition-transform duration-500  group-hover:scale-105"
                 key={image.name}
                 src={image.src}
                 alt={image.name}
                 height={300}
               />
-              <h3 className="text-center text-4xl text-gray-700 font-bold">
+              {/* <h3 className="absolute h-full w-full top-0 left-0 text-center text-4xl text-gray-700 font-bold">
                 {image.description}
-              </h3>
+              </h3> */}
+              <div className="absolute inset-0 group-hover:z-30 transition-transform ease-out bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/60 group-hover:via-black/50 group-hover:to-black/60"></div>
+              <div className="absolute inset-0 flex group-hover:z-50 translate-y-[100%] flex-col items-center justify-center px-9 text-center transition-all duration-500 group-hover:translate-y-[50%]">
+                <h3 className="absolute h-full z-20 w-full group-hover:visible top-0 left-0 text-center text-4xl text-slate-50 font-bold">
+                  {image.description}
+                </h3>
+              </div>
             </div>
           );
         })}

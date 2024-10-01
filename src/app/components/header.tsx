@@ -28,17 +28,17 @@ const Header = () => {
             Inicio
           </Link>
         </NavbarItem>
-        <NavbarItem className="hover:font-bold hover:scale-110  text-xl transition-all duration-200">
-          <Link color="foreground" href="#productos">
-            Nuestros productos
-          </Link>
-        </NavbarItem>
+
         <NavbarItem className="hover:font-bold hover:scale-110  text-xl transition-all duration-200">
           <Link href="#nosotros" aria-current="page">
             Nosotros
           </Link>
         </NavbarItem>
-
+        <NavbarItem className="hover:font-bold hover:scale-110  text-xl transition-all duration-200">
+          <Link color="foreground" href="#productos">
+            Nuestros productos
+          </Link>
+        </NavbarItem>
         <NavbarItem className="hover:font-bold hover:scale-110  text-xl transition-all duration-200">
           <Link color="foreground" href="#contacto">
             Contacto

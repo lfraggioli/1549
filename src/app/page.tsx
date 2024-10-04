@@ -8,7 +8,7 @@ import Hero from "./components/hero";
 
 export default function Home() {
   return (
-    <main className="flex flex-col w-full gap-5 bg-gradient-to-b from-[#fafafa] to-[#edf0fc] text-black items-center mx-auto justify-center">
+    <main className="flex flex-col w-full gap-5 bg-gradient-to-b from-[#fafafa] to-[#fcf1ed] text-black items-center mx-auto justify-center">
       <Hero />
 
       <About />

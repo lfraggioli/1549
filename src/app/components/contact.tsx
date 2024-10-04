@@ -10,7 +10,7 @@ const Contact = () => {
   return (
     <div
       id="contacto"
-      className="flex flex-col gap-10 bg-gradient-to-b from-slate-50/10 to-[#c9e0ff] py-10 w-full justify-center mx-auto"
+      className="flex flex-col gap-10 bg-gradient-to-b from-slate-50/10 to-[#388B9D]/10 py-10 w-full justify-center mx-auto"
     >
       <div className="flex flex-col gap-4 items-center mx-auto">
         <h1 className="text-gray-700 mb-2 font-black text-4xl">Contactanos</h1>

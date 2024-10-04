@@ -25,7 +25,7 @@ export function ContactForm() {
   return (
     <div>
       <form
-        className="flex bg-gradient-to-bl from-transparent to-indigo-300/20 shadow-lg border-1 border-gray-600/10 px-14 py-10 rounded-lg flex-col gap-4 w-full"
+        className="flex bg-gradient-to-bl from-transparent to-orange-300/20 shadow-lg border-1 border-gray-600/10 px-14 py-10 rounded-lg flex-col gap-4 w-full"
         onSubmit={handleSubmit}
       >
         <input type="hidden" name="subject" value="Nuevo mensaje de cliente" />
@@ -70,7 +70,7 @@ export function ContactForm() {
         </div>
         <button
           type="submit"
-          className="w-2/5 py-2 rounded-full text-slate-100 hover:text-white hover:font-bold text-xl font-semibold hover:bg-gradient-to-tr bg-[#444cb9] mx-auto hover:from-[#653ab4] hover:to-[#4272bb]  hover:scale-105 duration-300 transition-all ease-in-out shadow-md"
+          className="w-2/5 py-2 rounded-full text-slate-100 hover:text-white hover:font-bold text-xl font-semibold hover:bg-gradient-to-tr bg-[#F27405] mx-auto hover:from-[#B36D30] hover:to-[#F27405]  hover:scale-105 duration-500 transition-all ease-soft-spring shadow-md"
         >
           Enviar
         </button>
